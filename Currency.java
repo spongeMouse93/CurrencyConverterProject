@@ -8,13 +8,11 @@ public class Currency extends JFrame {
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setLayout(null);
         f.setVisible(true);
-        String[] currencies = { "Indian Rupees", "Canadian Dollar", "Australian Dollar", "Japanese Yen", "Euros",
-                "Pound Sterling", "Swiss Franc" };
+        String[] currencies = { "Indian Rupees", "Canadian Dollar", "Australian Dollar", "Japanese Yen", "Euros", "Pound Sterling", "Swiss Franc", "Russian Ruble"};
         JComboBox cb = new JComboBox(currencies);
         cb.setBounds(269, 76, 202, 28);
         f.add(cb);
         JLabel l1 = new JLabel("Currency Type: "), l2 = new JLabel("Enter USD: "), l3 = new JLabel("xxx");
-        ;
         l1.setBounds(38, 84, 104, 20);
         l2.setBounds(38, 30, 107, 20);
         l3.setBounds(38, 202, 200, 20);
@@ -43,6 +41,8 @@ public class Currency extends JFrame {
                         newAmount = amount * 140.32;
                     else if (cType.equals("Swiss Franc"))
                         newAmount = amount * 0.98;
+                    else if (cType.equals("Russian Ruble"))
+                        newAmount = amount * 61.5;
                     else
                         newAmount = amount * 1.47;
                     String text = "$" + amount + " = " + newAmount + " " + cType;

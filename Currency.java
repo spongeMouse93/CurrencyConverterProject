@@ -8,6 +8,7 @@ public class Currency extends JFrame {
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setLayout(null);
         f.setVisible(true);
+        f.setResizable(false);
         String[] currencies = { "Indian Rupees", "Canadian Dollar", "Australian Dollar", "Japanese Yen", "Euros", "Pound Sterling", "Swiss Franc", "Russian Ruble"};
         JComboBox cb = new JComboBox(currencies);
         cb.setBounds(269, 76, 202, 28);

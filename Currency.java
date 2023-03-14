@@ -29,9 +29,8 @@ public class Currency extends JFrame {
         b.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String cType = cb.getSelectedItem().toString();
-                String usAmount = tf.getText();
                 try {
-                    double amount = Double.parseDouble(usAmount), newAmount;
+                    double amount = Double.parseDouble(tf.getText()), newAmount;
                     if (cType.equals("Indian Rupees"))
                         newAmount = amount * 79.71;
                     else if (cType.equals("Canadian Dollar"))
@@ -46,8 +45,7 @@ public class Currency extends JFrame {
                         newAmount = amount * 61.5;
                     else
                         newAmount = amount * 1.47;
-                    String text = "$" + amount + " = " + newAmount + " " + cType;
-                    l3.setText(text);
+                    l3.setText("$" + amount + " = " + newAmount + " " + cType);
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(f, "Please input a number.", "Alert", JOptionPane.WARNING_MESSAGE);
                 }

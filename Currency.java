@@ -48,6 +48,8 @@ public class Currency extends JFrame {
                     l3.setText("$" + amount + " = " + newAmount + " " + cType);
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(f, "Please input a number.", "Alert", JOptionPane.WARNING_MESSAGE);
+                } catch (NullPointerException ex){
+                    JOptionPane.showMessageDialog(f, "Please input a number.", "Alert", JOptionPane.WARNING_MESSAGE);
                 }
             }
         });
